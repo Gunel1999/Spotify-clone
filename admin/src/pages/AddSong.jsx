@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { assets } from '../assets/admin-assets/assets';
 
 const AddSong = () => {
+  const [image, setImage] = useState(false);
+  const [song, setSong] = useState(false);
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [album, setAlbum] = useState('none');
+  const [loading, setLoading] = useState(false);
+
   return (
     <form className="flex flex-col items-start gap-8 text-gray-600">
       <div className="flex gap-8">
@@ -52,6 +59,12 @@ const AddSong = () => {
           <option value="none">None</option>
         </select>
       </div>
+      <button
+        type="submit"
+        className="text-base bg-black text-white py-2.5 px-14 cursor-pointer"
+      >
+        ADD
+      </button>
     </form>
   );
 };
