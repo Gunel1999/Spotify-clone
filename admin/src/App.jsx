@@ -9,6 +9,8 @@ import ListSong from './pages/ListSong';
 import SideBar from './components/SideBar';
 import NavBar from './components/NavBar';
 
+export const url = 'http://localhost:4000';
+
 const App = () => {
   return (
     <div className="flex items-start min-h-screen">
